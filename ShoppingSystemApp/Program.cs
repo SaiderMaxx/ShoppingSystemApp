@@ -6,18 +6,12 @@ using System.Threading.Tasks;
 
 namespace ShoppingSystemApp
 {
-    internal class Program
+    class Program
     {
         static void Main(string[] args)
         {
-            // Main
-
-            // Product ToString() works this way:
-            // Product product = new Product("test", 2);
+            // Product product = new Product("tess", 1);
             // Console.WriteLine(product.ToString());
-            // Output:
-            // Name: test
-            // Price: 2
         }
     }
 }

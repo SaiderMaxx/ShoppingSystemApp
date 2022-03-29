@@ -6,10 +6,40 @@ using System.Threading.Tasks;
 
 namespace ShoppingSystemApp
 {
-    internal class Product
+    public class Product
     {
-        public string Name { get; set; }
-        public double Price { get; set; }
+        private string name;
+
+        public string Name
+        {
+            get { return name; }
+            private set {
+                if (value == null)
+                {
+                    throw new ArgumentNullException("Name cannot be null!");
+                }
+                if (value.Length < 3 || value.Length > 30)
+                {
+                    throw new ArgumentOutOfRangeException("Name should be between 3 and 30 characters!");
+                }
+                name = value;
+            }
+        }
+
+        private double price;
+
+        public double Price
+        {
+            get { return price; }
+            private set { 
+                if(value <= 0)
+                {
+                    throw new ArgumentNullException("Price should be 0 or positive!");
+                }
+                price = value; 
+            }
+        }
+
 
         public Product(string name, double price)
         {
@@ -20,7 +50,6 @@ namespace ShoppingSystemApp
         public override string ToString()
         {
             return $"Name: {Name} \nPrice: {Price}";
-
         }
     }
 }
