@@ -10,8 +10,7 @@ namespace ShoppingSystemApp
     {
         static void Main(string[] args)
         {
-            // Product product = new Product("tess", 1);
-            // Console.WriteLine(product.ToString());
+
         }
     }
 }

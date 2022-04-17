@@ -6,50 +6,43 @@ using System.Threading.Tasks;
 
 namespace ShoppingSystemApp
 {
-    public class Product
+    public abstract class Product
     {
         private string name;
-
+        private double price;
+        protected Product(string name, double price)
+        {
+            this.Name = name;
+            this.Price = price;
+        }
         public string Name
         {
-            get { return name; }
-            private set {
-                if (value == null)
-                {
-                    throw new ArgumentNullException("Name cannot be null!");
-                }
+            get { return this.name; }
+            private set
+            {
                 if (value.Length < 3 || value.Length > 30)
                 {
-                    throw new ArgumentOutOfRangeException("Name should be between 3 and 30 characters!");
+                    throw new ArgumentException("Name should be between 3 and 30 characters!");
                 }
-                name = value;
+                this.name = value;
             }
         }
-
-        private double price;
-
         public double Price
         {
-            get { return price; }
-            private set { 
-                if(value <= 0)
+            get { return this.price; }
+            private set
+            {
+                if (value < 0)
                 {
-                    throw new ArgumentNullException("Price should be 0 or positive!");
+                    throw new ArgumentException("Price should be 0 or positive!");
                 }
-                price = value; 
+                this.price = value;
             }
         }
-
-
-        public Product(string name, double price)
-        {
-            Name = name;
-            Price = price;
-        }
-
         public override string ToString()
         {
-            return $"Name: {Name} \nPrice: {Price}";
+            return $"Name: {this.Name}" + Environment.NewLine +
+                   $"Price: {this.Price}";
         }
     }
 }

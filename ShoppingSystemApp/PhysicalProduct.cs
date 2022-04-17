@@ -9,14 +9,13 @@ namespace ShoppingSystemApp
     class PhysicalProduct : Product
     {
         private string name;
-
+        private double price;
+        private double weight;
         public string Name
         {
             get { return name; }
             private set { name = value; }
         }
-
-        private double price;
 
         public double Price
         {
@@ -24,15 +23,13 @@ namespace ShoppingSystemApp
             private set { price = value; }
         }
 
-        private double weight;
-
         public double Weight
         {
             get { return weight; }
             private set {
                 if (value <= 0)
                 {
-                    throw new ArgumentNullException("Weight should be positive!");
+                    throw new ArgumentException("Weight should be positive!");
                 }
                 weight = value; 
             }
