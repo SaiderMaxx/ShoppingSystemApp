@@ -9,6 +9,7 @@ namespace ShoppingSystemApp
     class Receipt
     {
         private string customerName;
+        List<Product> products;
 
         public string CustomerName
         {
@@ -34,9 +35,9 @@ namespace ShoppingSystemApp
             // return $"Receipt of {CustomerName} \nTotal Price: {sumOfProductPrices} \nProducts:";
         }
 
-        private void AddProduct(Product product)
+        public void AddProduct(Product product)
         {
-            // TODO
+            products.Add(product);
         }
     }
 }

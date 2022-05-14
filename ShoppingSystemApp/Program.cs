@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ShoppingSystemApp.Controller;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,7 +11,9 @@ namespace ShoppingSystemApp
     {
         static void Main(string[] args)
         {
-
+            mainController controller = new mainController();
+            Engine engine = new Engine(controller);
+            engine.Run();
         }
     }
 }
