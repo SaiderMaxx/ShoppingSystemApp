@@ -37,6 +37,9 @@ namespace ShoppingSystemApp
 
         public ServiceProduct(string name, double price, double time) : base(name, price)
         {
+            Name = name;
+            Price = price;
+            Time = time;
         }
 
         public override string ToString()

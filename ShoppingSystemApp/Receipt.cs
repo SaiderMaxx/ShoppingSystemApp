@@ -26,13 +26,23 @@ namespace ShoppingSystemApp
         public Receipt(string customerName)
         {
             CustomerName = customerName;
+            products = new List<Product>();
         }
 
+        public double productsSum { get => this.products.Sum(p => p.Price); }
         public override string ToString()
         {
-            return "";
-            // TODO
-            // return $"Receipt of {CustomerName} \nTotal Price: {sumOfProductPrices} \nProducts:";
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine($"Receipt of {CustomerName}");
+            sb.AppendLine($"Total Price: {this.productsSum:f2}");
+            sb.Append("Products:");
+            foreach (var prod in this.products)
+            {
+                sb.AppendLine();
+                sb.Append(prod.ToString());
+                sb.AppendLine();
+            }
+            return sb.ToString();
         }
 
         public void AddProduct(Product product)
