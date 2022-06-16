@@ -6,15 +6,16 @@ using System.Threading.Tasks;
 
 namespace ShoppingSystemApp
 {
-    public abstract class Product
+    public class Product
     {
         private string name;
         private double price;
-        protected Product(string name, double price)
+        public Product(string name, double price)
         {
             this.Name = name;
             this.Price = price;
         }
+        
         public string Name
         {
             get { return this.name; }

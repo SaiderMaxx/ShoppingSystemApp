@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShoppingSystemApp", "ShoppingSystemApp\ShoppingSystemApp.csproj", "{30F96FE7-58D8-4E5D-8B8B-74A4C634DED8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShoppingSystemApp", "ShoppingSystemApp\ShoppingSystemApp.csproj", "{30F96FE7-58D8-4E5D-8B8B-74A4C634DED8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShoppingSystemTest", "ShoppingSystemTest\ShoppingSystemTest.csproj", "{ACFB2151-5DF5-49AC-8A9E-39CECF9F927E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{30F96FE7-58D8-4E5D-8B8B-74A4C634DED8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{30F96FE7-58D8-4E5D-8B8B-74A4C634DED8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{30F96FE7-58D8-4E5D-8B8B-74A4C634DED8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ACFB2151-5DF5-49AC-8A9E-39CECF9F927E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACFB2151-5DF5-49AC-8A9E-39CECF9F927E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACFB2151-5DF5-49AC-8A9E-39CECF9F927E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACFB2151-5DF5-49AC-8A9E-39CECF9F927E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
